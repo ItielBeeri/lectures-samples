@@ -1,0 +1,25 @@
+<div>
+  <h1>Actions</h1>
+  <div>Value: <input #valueInput /></div>
+  <div>
+    <button type="button" (click)="changeAA(valueInput.value)">
+      Change AA
+    </button>
+    <button type="button" (click)="changeAB(valueInput.value)">
+      Change AB
+    </button>
+    <button type="button" (click)="changeB(valueInput.value)">Change B</button>
+  </div>
+</div>
+<div>
+  <h1>Results</h1>
+  <div>Index: <input [formControl]="indexControl" type="number" /></div>
+  <div>
+    <h2>AA 1:</h2>
+    <p>{{ (aaElement1$ | async)?.aaElement }}</p>
+  </div>
+  <div>
+    <h2>AA 2:</h2>
+    <p>{{ (aaElement2$ | async)?.aaElement }}</p>
+  </div>
+</div>
